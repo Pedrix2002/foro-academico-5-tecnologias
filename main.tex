@@ -1,0 +1,184 @@
+\documentclass[12pt,letterpaper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish]{babel}
+\usepackage{newtxtext}
+\usepackage{geometry}
+\usepackage{setspace}
+\usepackage{ragged2e}
+\usepackage[hidelinks]{hyperref}
+
+\geometry{
+    top=2.54cm,
+    bottom=2.54cm,
+    left=2.54cm,
+    right=2.54cm
+}
+
+\doublespacing
+\setlength{\parindent}{1.27cm}
+\setlength{\parskip}{0pt}
+\pagestyle{plain}
+
+\begin{document}
+
+% ==================================================
+% PORTADA
+% ==================================================
+
+\begin{titlepage}
+
+\begin{center}
+
+\vspace*{1.5cm}
+
+\textbf{UNIVERSIDAD MARIANO GÁLVEZ DE GUATEMALA}
+
+\vspace{2cm}
+
+{\Large\textbf{Tecnologías y arquitecturas modernas para aplicaciones}}
+
+\vspace{0.7cm}
+
+\textbf{Foro académico 5}
+
+\vfill
+
+\begin{flushleft}
+
+\textbf{Estudiante:} Pedro Javier De León Coy
+
+\vspace{0.4cm}
+
+\textbf{Carné:} 7690-22-8894
+
+\vspace{0.4cm}
+
+\textbf{Curso:} Seminario de Tecnologías de la Información
+
+\vspace{0.4cm}
+
+\textbf{Docente:} Melvin Cali
+
+\vspace{0.4cm}
+
+\textbf{Fecha:} 4 de septiembre de 2026
+
+\end{flushleft}
+
+\vfill
+
+\end{center}
+
+\end{titlepage}
+
+% ==================================================
+% CONTENIDO
+% ==================================================
+
+\justifying
+
+\begin{center}
+{\Large\textbf{Tecnologías y arquitecturas modernas para aplicaciones}}
+\end{center}
+
+\section*{Introducción}
+
+Actualmente las aplicaciones necesitan adaptarse a una gran cantidad de usuarios, mantenerse disponibles y permitir cambios sin afectar completamente el sistema. Por esta razón, han surgido tecnologías y arquitecturas que facilitan la administración de servidores, servicios y aplicaciones distribuidas.
+
+Entre estas tecnologías se encuentran la orquestación de servidores, Kubernetes, los microservicios, OAuth 2.0 y los servicios en la nube. Aunque cada concepto cumple una función diferente, todos pueden contribuir a construir sistemas más organizados, escalables y seguros.
+
+\section*{Orquestación de servidores}
+
+La orquestación de servidores consiste en automatizar tareas relacionadas con la administración de infraestructura y aplicaciones. Esto puede incluir la distribución de servicios, el despliegue de nuevas versiones, la asignación de recursos y la recuperación de servicios cuando ocurre algún problema.
+
+La principal ventaja de la orquestación es reducir la cantidad de tareas manuales que debe realizar un administrador. En un sistema pequeño puede ser sencillo controlar cada servicio de forma individual, pero cuando aumenta la cantidad de servidores y aplicaciones, la automatización permite mantener un mayor orden y disminuir errores.
+
+\section*{Kubernetes}
+
+Kubernetes es una plataforma de código abierto diseñada para administrar aplicaciones que funcionan dentro de contenedores. Permite automatizar tareas como el despliegue, escalamiento y administración de aplicaciones contenerizadas (Kubernetes Authors, 2026).
+
+Por ejemplo, si una aplicación recibe más usuarios de los habituales, Kubernetes puede ejecutar más instancias para distribuir la carga. Si una instancia deja de funcionar, también puede reemplazarla automáticamente. Estas características lo convierten en una herramienta importante para sistemas que necesitan alta disponibilidad.
+
+\section*{Microservicios}
+
+La arquitectura de microservicios divide una aplicación en varios servicios pequeños que realizan funciones específicas. En lugar de desarrollar todas las funciones dentro de una sola aplicación, cada servicio puede encargarse de una parte determinada.
+
+Por ejemplo, una plataforma de comercio electrónico puede tener un servicio para usuarios, otro para productos, otro para pagos y otro para pedidos. Esta separación facilita realizar cambios en una función sin tener que modificar todo el sistema.
+
+Sin embargo, los microservicios también pueden aumentar la complejidad debido a que los diferentes servicios deben comunicarse entre sí. Por ello, esta arquitectura debe utilizarse cuando las necesidades del proyecto realmente lo justifiquen.
+
+\section*{OAuth 2.0}
+
+OAuth 2.0 es un marco de autorización que permite que una aplicación acceda a ciertos recursos de un usuario sin necesidad de conocer directamente su contraseña. Su objetivo es permitir un acceso controlado mediante permisos específicos (Hardt, 2012).
+
+Un ejemplo común ocurre cuando una aplicación solicita permiso para utilizar información de otro servicio. En lugar de compartir las credenciales completas, el usuario autoriza únicamente determinadas acciones o datos. De esta manera se limita el acceso que recibe la aplicación.
+
+\section*{Servicios en la nube y 12-factor application}
+
+Los servicios en la nube permiten utilizar recursos tecnológicos a través de Internet, incluyendo servidores, almacenamiento, bases de datos y servicios de procesamiento. Una de sus ventajas es que los recursos pueden aumentar o disminuir de acuerdo con las necesidades de una aplicación.
+
+El enfoque denominado \textit{12-factor application} propone una serie de buenas prácticas orientadas al desarrollo de aplicaciones modernas. Entre ellas se encuentran la correcta administración de dependencias, configuración, procesos y entornos de ejecución (Wiggins, 2017).
+
+Estas prácticas pueden facilitar que una aplicación sea más sencilla de desplegar y mantener en diferentes entornos de nube. Su aplicación resulta especialmente útil cuando se trabaja con sistemas distribuidos y servicios que necesitan crecer con el tiempo.
+
+\section*{Relación entre las tecnologías}
+
+Estas tecnologías no deben entenderse como herramientas aisladas. Por ejemplo, una aplicación puede estar dividida en microservicios, ejecutarse dentro de contenedores y utilizar Kubernetes para administrarlos. Al mismo tiempo, puede utilizar OAuth 2.0 para controlar el acceso de los usuarios y ejecutarse dentro de una infraestructura en la nube.
+
+La selección de cada tecnología debe depender de las necesidades reales del proyecto. Utilizar herramientas complejas en una aplicación pequeña puede generar trabajo innecesario, mientras que en sistemas de mayor tamaño estas tecnologías pueden facilitar considerablemente la administración y el crecimiento.
+
+\section*{Conclusión}
+
+La orquestación de servidores, Kubernetes, los microservicios, OAuth 2.0 y los servicios en la nube representan diferentes soluciones para problemas comunes dentro del desarrollo de aplicaciones modernas.
+
+Considero que uno de los aspectos más importantes es comprender que no todas las aplicaciones necesitan utilizar todas estas tecnologías. La elección debe realizarse de acuerdo con el tamaño del proyecto, cantidad de usuarios, seguridad y capacidad de crecimiento requerida. Utilizadas correctamente, estas herramientas pueden ayudar a desarrollar sistemas más eficientes y fáciles de mantener.
+
+% ==================================================
+% REFERENCIAS
+% ==================================================
+
+\newpage
+
+\begin{center}
+\textbf{Referencias}
+\end{center}
+
+\setlength{\parindent}{0cm}
+
+\hangindent=1.27cm
+\hangafter=1
+Hardt, D. (2012).
+\textit{The OAuth 2.0 Authorization Framework}.
+Internet Engineering Task Force.
+\url{https://datatracker.ietf.org/doc/html/rfc6749}
+
+\vspace{0.5cm}
+
+\hangindent=1.27cm
+\hangafter=1
+Kubernetes Authors. (2026).
+\textit{Kubernetes Documentation}.
+\url{https://kubernetes.io/docs/}
+
+\vspace{0.5cm}
+
+\hangindent=1.27cm
+\hangafter=1
+Wiggins, A. (2017).
+\textit{The Twelve-Factor App}.
+\url{https://12factor.net/}
+
+% ==================================================
+% REPOSITORIO
+% ==================================================
+
+\vspace{1cm}
+
+\textbf{Repositorio Git:}
+
+\noindent
+\url{https://github.com/Pedrix2002/foro-academico-5-tecnologias}
+
+\end{document}
